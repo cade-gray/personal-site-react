@@ -1,0 +1,19 @@
+.resume-container{
+    height: 100vh;
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto;
+    background: #00B6EF;
+    padding-top: 5vh;
+}
+.resume-img{
+    box-shadow: 0px 13px 16px rgba(0, 0, 0, 0.25);
+    width: 40vw;
+    height: 80vh;
+}
+@media screen and (max-width: 800px) {
+    .resume-img{
+        width: 90vw;
+        height: 80vh;
+    }
+   }

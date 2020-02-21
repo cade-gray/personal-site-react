@@ -1,38 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee&display=swap');
 .App {
-  text-align: center;
+    background: #00B6EF;    
+    font-family: Bungee;
+    font-style: normal;
+    font-weight: normal;
+    height: 100vh;
+    
+}
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Track */
+::-webkit-scrollbar-track {
+ background: #5E5757;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(0, 195, 255); 
+  border-radius: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #29f07c; 
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
