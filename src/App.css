@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Bungee&display=swap');
-.App {
-    background: #F8F8FF;    
+.App { 
     font-family: Bungee;
     font-style: normal;
     font-weight: normal;
@@ -14,7 +13,6 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
- background: #F8F8FF;
 }
  
 /* Handle */

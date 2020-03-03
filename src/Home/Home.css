@@ -3,7 +3,6 @@
     padding-right: 2vw;
     display: grid;
     grid-template-columns: auto auto;
-    background: #F8F8FF;
 }
 .me-img{
     height: 100%;
