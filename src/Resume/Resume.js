@@ -9,7 +9,7 @@ const resume = () => {
     return(
         <div className = 'resume-container'>
             <div>
-            <h2><a href={MyResumePDF} download>Download this resume for a better viewing experience!</a></h2>
+            <h4><a href={MyResumePDF} download>Download this resume for a better viewing experience!</a></h4>
                 <img src={MyResumeImg} className='resume-img' alt='My resume' />
                 <br />
            </div>

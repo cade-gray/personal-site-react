@@ -1,7 +1,7 @@
 .projects-container{
     padding-left: 2vw;
     padding-right: 2vw;
-    background: #00B6EF;
+    background: #F8F8FF;
     padding: 10px;
 }
 .vaultaire-pic{
@@ -12,11 +12,11 @@
 .project-list-container{
     margin-top: 20px;
     text-align: center;
-    background: #5E5757;
+    background: ;
     padding: 30px;
     border-radius: 5px;
     box-shadow: 0px 13px 16px rgba(0, 0, 0, 0.25);
-    color: whitesmoke;
+    color: #333;
 }
 .mhh-pic{
     width: 55vw;

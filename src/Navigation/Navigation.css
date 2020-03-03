@@ -1,6 +1,6 @@
 .header{
     height: 25vh;
-    background: linear-gradient(180deg, #29f07c 81.86%, #00B6EF 100%);
+    background: #F8F8FF;
     padding: 20px;
     display: grid;
     grid-template-columns: auto auto;
