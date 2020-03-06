@@ -6,12 +6,12 @@
 .projContainer{
     margin-bottom: 100px;
     background: #f8f8ff;
-    width: 55vw;
+
     text-align: center;
     box-shadow: 0px 13px 16px rgba(0, 0, 0, 0.25)
 }
 .projContainer:hover{
-    transform: scale(1.1);
+    transform: scale(1.01);
 }
 .desc{
     text-align: justify;
@@ -19,7 +19,6 @@
 }
 @media screen and (max-width: 800px) {
     .projContainer{
-        width: 100%;
     }
     .projContainer:hover{
         transform: scale(1);
