@@ -5,10 +5,7 @@ const home = () => {
     return(
         <div className = 'container'>
             <div className="left-col">
-                <img src={Image} className="me-img" alt="Me Being Handsome"/>
-            </div>
-            <div className="right-col">
-                <h1 className="about-me-text">Full Stack Web Developer With Strong Foundations</h1>
+                <h1 className="about-me-text">Business Intelligence and Web Development</h1>
                 <div className='skill-container'>
                     <div className='skill-top-col'>
                         <svg viewBox="0 0 128 128" width="150px" height="150px">
@@ -39,6 +36,9 @@ const home = () => {
                         </svg>
                     </div>
                 </div>
+            </div>
+            <div className="right-col">
+            <img src={Image} className="me-img" alt="Me Being Handsome"/>
             </div>
             <br />
         </div>

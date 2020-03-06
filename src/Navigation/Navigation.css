@@ -1,5 +1,4 @@
 .header{
-    height: 25vh;
     padding: 20px;
     display: grid;
     grid-template-columns: auto auto;
@@ -9,47 +8,16 @@
     position: relative;
     padding: 0px;
     margin: 0px;
-    width: 10vw;
-    line-height: 12vh;
-    font-size: 7vh;
-    color: #5E5757;
+    font-size: 60px;
+    color: #333;
     text-shadow: 0px 8px 9px rgba(0, 0, 0, 0.25);
     -webkit-text-stroke-width: 1.2px;
     -webkit-text-stroke-color: #00B6EF;
 }
-.nav-ul{
-    float: right;
-    list-style-type: none;
-    padding-right: 0px;
-}
-.nav-ul li{
-    float: left;
-    color: #00B6EF;
-    font-size: 30px;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #333;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    padding: 20px;
-    text-decoration: none;
-}
-.nav-ul li:hover{
-        transform: scale(1.2);
-
-}
 
   @media screen and (max-width: 800px) {
-       .nav-ul{
-                float: none;
-                text-align: center;
-                margin-left: 10vw;
-       }
-       .nav-ul li{
-               float: none;
-               padding: 1vw;
-               
-       }
        .header-text{
-           font-size: 5vh;
+           
        }
        
       }
