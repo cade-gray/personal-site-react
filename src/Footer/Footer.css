@@ -1,0 +1,14 @@
+.footer{
+    width: 100%;
+}
+.iconLinks{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+.contactInfo{
+    text-align: center;
+}
+.icon:hover{
+    transform: scale(1.5);
+}

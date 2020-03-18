@@ -4,7 +4,6 @@
     font-style: normal;
     font-weight: normal;
     height: 100vh;
-    
 }
 #page-wrap{
   overflow: auto; /* Prevent sidebar from showing a scrollbar on page */
