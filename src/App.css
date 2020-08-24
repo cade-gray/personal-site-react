@@ -1,12 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
 .App { 
-    font-family: Bungee;
-    font-style: normal;
-    font-weight: normal;
+    font-family: 'Permanent Marker', cursive;
     height: 100vh;
 }
 #page-wrap{
   overflow: auto; /* Prevent sidebar from showing a scrollbar on page */
+  height: 100vh;
 }
 /* Individual item */
 .bm-item {
@@ -18,7 +17,7 @@
   text-align: center;
   outline: none;
   text-shadow: 0px 8px 9px rgba(0, 0, 0, 0.25);
-  -webkit-text-stroke-width: 1.2px;
+  -webkit-text-stroke-width: 0.1px;
   -webkit-text-stroke-color: #00B6EF;
 }
 
@@ -34,7 +33,7 @@
   position: absolute;
   width: 36px;
   height: 30px;
-  right: 20px;
+  left: 20px;
   top: 30px;
 }
 

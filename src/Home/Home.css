@@ -4,7 +4,8 @@
     padding-right: 2vw;
     display: grid;
     grid-template-columns: auto auto;
-    height: 100%;
+    grid-template-rows: auto;
+    height: 70vh;
 }
 .me-img{
     height: 100%;
@@ -54,22 +55,23 @@
 @media screen and (max-width: 800px) {
     .container{
         display: block;
+        height: 75vh;
     }
     .left-col{
-        
+        height: 40%;
     }
     .right-col{
         margin-left: 0px;
-        margin-top: 20px;
+        height: 60%;
     }
     .skill-container{
         margin: 10px;
     }
     .me-img{
-        height: 65vh;
-        width: 80vw;
+        width: 100%;
     }
+    
     .about-me-text{
-        font-size: 44px;
+        font-size: 30px;
     }
   }

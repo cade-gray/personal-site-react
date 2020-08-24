@@ -1,20 +1,21 @@
 .projImg{
-    width: 100%;
-    height: 55vh;
+    height: 50vh;
+    width: 75%;
     box-shadow: 0px 13px 16px rgba(0, 0, 0, 0.25);
+    margin: 20px;
 }
 .projContainer{
     margin-bottom: 100px;
     background: #f8f8ff;
-
     text-align: center;
-    box-shadow: 0px 13px 16px rgba(0, 0, 0, 0.25)
+    box-shadow: 0px 13px 16px rgba(0, 0, 0, 0.25);
+    padding: 20px;
 }
 .projContainer:hover{
     transform: scale(1.01);
 }
 .desc{
-    text-align: justify;
+    text-align: center;
     padding: 10px;
 }
 @media screen and (max-width: 800px) {
@@ -22,5 +23,8 @@
     }
     .projContainer:hover{
         transform: scale(1);
+    }
+    .projImg{
+        height: 25vh;
     }
   }
