@@ -11,14 +11,13 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Sidebar pageWrapId={"page-wrap"} outerContainerId={"App"} />
-        <div id="page-wrap">
-          <Navigation />
+        <Navigation />
+        <div className="content" >
           <Route exact path='/' component={Home} />
           <Route path='/resume' component={Resume} />
           <Route path='/projects' component={Projects} />
-          <Footer />
-        </div>
+        </div> 
+        <Footer />
       </div>
     </Router>
   );

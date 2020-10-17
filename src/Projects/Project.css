@@ -15,8 +15,9 @@
     transform: scale(1.01);
 }
 .desc{
-    text-align: center;
+    text-align: justify;
     padding: 10px;
+    font-size: 1rem;
 }
 @media screen and (max-width: 800px) {
     .projContainer{
@@ -26,5 +27,8 @@
     }
     .projImg{
         height: 25vh;
+    }
+    .desc{
+        font-size: .6rem;
     }
   }
