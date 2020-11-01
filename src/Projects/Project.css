@@ -7,12 +7,16 @@
 .projContainer{
     margin-bottom: 100px;
     background: #f8f8ff;
-    text-align: center;
     box-shadow: 0px 13px 16px rgba(0, 0, 0, 0.25);
     padding: 20px;
+    text-align: justify;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.projContainer:hover{
-    transform: scale(1.01);
+.projName{
+    text-align: center;
 }
 .desc{
     text-align: justify;
@@ -20,11 +24,6 @@
     font-size: 1rem;
 }
 @media screen and (max-width: 800px) {
-    .projContainer{
-    }
-    .projContainer:hover{
-        transform: scale(1);
-    }
     .projImg{
         height: 25vh;
     }

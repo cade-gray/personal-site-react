@@ -4,7 +4,7 @@ class Project extends Component {
     render() {
         return (
             <div className="projContainer">
-                <h2>{this.props.projName}</h2>
+                <h2 className="projName">{this.props.projName}</h2>
                 {this.props.imgURL.map(image => {
                     return <img className='projImg' src={image} alt=""></img>
                 })}

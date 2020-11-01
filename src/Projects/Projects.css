@@ -1,16 +1,13 @@
 @import url('//fonts.googleapis.com/css?family=Comfortaa');
 
 .projects-container{
-    padding-left: 25vw;
-    padding-right: 25vw;
-    padding: 10px;
+    padding-left: 10vw;
+    padding-right: 10vw;
     font-family: comfortaa;
 }
 .project-list-container{
-    margin-top: 20px;
-    text-align: justify;
-    padding: 30px;
-    color: #333;
+    display: flex;
+    flex-direction: column;
 }
 .project-comp{
     margin: 100px;
@@ -18,10 +15,7 @@
 
 @media screen and (max-width: 800px) {
     .projects-container{
-       
-        
-    }
-    .project-list-container{
-        
+        padding-left: 3vw;
+        padding-right: 3vw;
     }
    }

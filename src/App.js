@@ -5,7 +5,6 @@ import Navigation from './Navigation/Navigation';
 import Home from './Home/Home';
 import Resume from './Resume/Resume';
 import Projects from './Projects/Projects'
-import Sidebar from './Sidebar/Sidebar'
 import Footer from './Footer/Footer'
 function App() {
   return (
