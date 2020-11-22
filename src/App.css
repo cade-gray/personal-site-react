@@ -2,7 +2,7 @@
 .App { 
   font-family: 'Permanent Marker', cursive;
   display: grid;
-  grid-template-rows: 10% auto 10%;
+  grid-template-rows: 10% auto;
   height: 100vh;
 }
 /* width */
