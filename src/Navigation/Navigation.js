@@ -10,8 +10,8 @@ const navigation = () => {
                 </Link>
             </div>
             <div className="nav-item">
-                <Link to="/resume" >
-                    <h2 className="header-text">Resume</h2>
+                <Link to="/about" >
+                    <h2 className="header-text">About</h2>
                 </Link>
             </div>
             <div className="nav-item">
