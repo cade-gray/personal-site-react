@@ -14,21 +14,24 @@
     line-height: 1.7;
     color: #222;
 }
-.resumeSvg{
-    height: 100%;
-}
 .bottomHalf{
     display: flex;
     height: 90vh;
 }
 .resumeCard{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     background: #f8f8ff;
     box-shadow: 10px 10px 10px #00b7ef;
     padding: 1rem;
     margin: 1rem;
     width: 50%;
+}
+.resumeSvg{
+    height: 100%;
+}
+.resumeLink{
 }
 .socialCard{
     display: grid;

@@ -7,6 +7,7 @@ import {ReactComponent as GithubSVG} from './Assets/github.svg';
 import {ReactComponent as CodepenSVG} from './Assets/codepen.svg';
 import {ReactComponent as YoutubeSVG} from './Assets/youtube.svg';
 import {ReactComponent as LinkedinSVG} from './Assets/linkedin.svg';
+import ResumePDF from './Assets/myResume.pdf'
 var bioText = require('./bioText')
 
 export default class About extends Component {
@@ -18,7 +19,9 @@ export default class About extends Component {
                 </div>
                 <div className="bottomHalf">
                     <div className="resumeCard">
-                        <ResumeSVG className="resumeSvg"/>
+                        <h2>Resume</h2>
+                        <ResumeSVG className="resumeSvg" />
+                        <a href={ResumePDF} download className="resumeLink"><h3>Click to download as PDF file.</h3></a>
                     </div>
                     <div className="socialCard">
                         <div className="socialItem" id="twitter">
