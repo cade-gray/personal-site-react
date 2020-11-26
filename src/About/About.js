@@ -20,8 +20,10 @@ export default class About extends Component {
                 <div className="bottomHalf">
                     <div className="resumeCard">
                         <h2>Resume</h2>
-                        <ResumeSVG className="resumeSvg" />
-                        <a href={ResumePDF} download className="resumeLink"><h3>Click to download as PDF file.</h3></a>
+                        <div className="resumeContainer">
+                            <ResumeSVG className="resumeSvg" />
+                        </div>
+                        <a href={ResumePDF} download className="resumeLink"><div className="downloadDiv">Download PDF</div></a>
                     </div>
                     <div className="socialCard">
                         <div className="socialItem" id="twitter">
