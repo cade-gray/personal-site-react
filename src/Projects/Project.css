@@ -2,7 +2,7 @@
     height: 50vh;
     width: 75%;
     box-shadow: 0px 13px 16px rgba(0, 0, 0, 0.25);
-    margin: 20px;
+    margin: 3rem;
 }
 .projContainer{
     padding: 3rem;
@@ -19,15 +19,19 @@
     text-align: center;
 }
 .desc{
-    text-align: justify;
+    text-align: left;
     padding: 10px;
     font-size: 1rem;
 }
 @media screen and (max-width: 800px) {
+    .projContainer{
+        padding: 1rem;
+    }
     .projImg{
         height: 25vh;
+        margin: 1rem;
     }
     .desc{
-        font-size: .6rem;
+        font-size: .8rem;
     }
   }
