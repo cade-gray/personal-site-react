@@ -41,6 +41,7 @@
 @media screen and (max-width: 800px) {
     .projContainer{
         padding: 1rem;
+        margin: 1rem;
     }
     .projImg{
         height: 25vh;
