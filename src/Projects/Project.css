@@ -23,6 +23,21 @@
     padding: 10px;
     font-size: 1rem;
 }
+.githubLink{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.githubSVG{
+    height: 2rem;
+    width: 2rem;
+}
+.githubSVG:hover {
+    transform: scale(1.5);
+}
+.githubText{
+    font-size: .7rem;
+}
 @media screen and (max-width: 800px) {
     .projContainer{
         padding: 1rem;
