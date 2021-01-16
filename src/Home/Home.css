@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
 .container{
-    padding-left: 2vw;
-    padding-right: 2vw;
+    padding-left: 2rem;
+    padding-right: 2rem;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: auto;

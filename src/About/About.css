@@ -88,9 +88,6 @@
 .socialSVG:hover{
     transform: scale(1.5);
 }
-.socialLink{
-
-}
 #twitter{
     background: #1DA1F2;
 }
@@ -123,13 +120,16 @@
         align-items: center;
         justify-content: center;
         margin: 2rem;
+        height: 100%;
     }
     .socialCard{
         width: 100%;
-        height: 50vh;
+        height: 50%;
         margin-bottom: 3rem;
     }
-    .resumeCard{
-
+    .socialSVG{
+        height: 2rem;
+        width: 2rem;
+        padding: 2rem;
     }  
    }

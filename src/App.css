@@ -3,7 +3,7 @@
 .App { 
   font-family: 'Permanent Marker', cursive;
   display: grid;
-  grid-template-rows: 10% auto;
+  grid-template-rows: 10% 90%;
   height: 100%;
 }
 
@@ -30,7 +30,7 @@
 /* Keep all pages the same width on mobile due to about page being different */
 @media screen and (max-width: 800px) {
   .content{
-    width: 100vw;
+    width: 100%;
   }
 }
 
