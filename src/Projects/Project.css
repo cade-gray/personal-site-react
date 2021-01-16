@@ -5,10 +5,10 @@
     margin: 20px;
 }
 .projContainer{
-    margin-bottom: 100px;
+    padding: 3rem;
+    margin: 3rem;
     background: #f8f8ff;
     box-shadow: 10px 10px 10px #00b7ef;
-    padding: 20px;
     text-align: justify;
     color: #333;
     display: flex;
