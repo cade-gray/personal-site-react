@@ -1,5 +1,4 @@
 import React from 'react'
-import Image from '../images/croppedOfMe.jpeg'
 import './Home.css'
 const home = () => {
     return(
