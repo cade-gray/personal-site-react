@@ -8,11 +8,11 @@
     height: 100%;
     overflow: hidden;
 }
-.top-row{
+.left-half{
     display: flex;
     align-items: center;
 }
-.bottom-row{
+.right-half{
     display: grid;
     grid-template-columns: auto auto;
     justify-items: center;
@@ -36,13 +36,6 @@
 @media screen and (max-width: 800px) {
     .container{
         grid-template-columns: auto;
-    }
-    .left-col{
-        height: 40%;
-    }
-    .right-col{
-        margin-left: 0px;
-        height: 60%;
     }
     .skill-container{
         margin: 10px;
