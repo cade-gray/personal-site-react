@@ -9,7 +9,6 @@ import colorPal2 from '../images/colorPalCreate.png'
 import colorPal3 from '../images/colorPalProfile.png'
 import Project from './Project'
 
-
 const projects = () => {
     return(
         <div className = 'projects-container'>

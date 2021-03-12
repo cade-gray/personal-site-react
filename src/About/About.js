@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 import './About.css'
-import {ReactComponent as ResumeSVG} from './Assets/myResumeSvg.svg';
-import {ReactComponent as TwitterSVG} from './Assets/twitter.svg';
-import {ReactComponent as InstagramSVG} from './Assets/instagram.svg';
-import {ReactComponent as GithubSVG} from './Assets/github.svg';
-import {ReactComponent as CodepenSVG} from './Assets/codepen.svg';
-import {ReactComponent as YoutubeSVG} from './Assets/youtube.svg';
-import {ReactComponent as LinkedinSVG} from './Assets/linkedin.svg';
-import ResumePDF from './Assets/myResume.pdf'
-var bioText = require('./bioText')
+import {ReactComponent as ResumeSVG} from '../SocialCard/Assets/myResumeSvg.svg';
+import {ReactComponent as TwitterSVG} from '../SocialCard/Assets/twitter.svg';
+import {ReactComponent as InstagramSVG} from '../SocialCard/Assets/instagram.svg';
+import {ReactComponent as GithubSVG} from '../SocialCard/Assets/github.svg';
+import {ReactComponent as CodepenSVG} from '../SocialCard/Assets/codepen.svg';
+import {ReactComponent as YoutubeSVG} from '../SocialCard/Assets/youtube.svg';
+import {ReactComponent as LinkedinSVG} from '../SocialCard/Assets/linkedin.svg';
+
+var bioText = require('../BioCard/bioText')
 
 export default class About extends Component {
     render() {
@@ -23,7 +23,7 @@ export default class About extends Component {
                         <div className="resumeContainer">
                             <ResumeSVG className="resumeSvg" />
                         </div>
-                        <a href={ResumePDF} download className="resumeLink"><div className="downloadDiv">Download PDF</div></a>
+                        <a className="resumeLink"><div className="downloadDiv">Download PDF</div></a>
                     </div>
                     <div className="socialCard">
                         <div className="socialItem" id="twitter">

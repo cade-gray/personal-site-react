@@ -1,10 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
-@import url('//fonts.googleapis.com/css?family=Comfortaa');
 .App { 
-  font-family: 'Permanent Marker', cursive;
-  display: grid;
-  grid-template-rows: 10% 90%;
-  height: 100%;
+  font-family: comfortaa;
 }
 
 /* width */

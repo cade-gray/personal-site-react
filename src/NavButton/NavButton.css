@@ -1,0 +1,26 @@
+.navButton{
+    background: #393939;
+    box-shadow: 10px 10px 10px #00b7ef;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
+    margin: 3rem;
+    font-size: 2rem;
+    pointer-events: none;
+}
+.linkText{
+    color: #00b7ef;
+    text-shadow: 2px 2px 1px #333;
+    margin: 0;
+    pointer-events: auto;
+}
+.navButton:hover{
+    box-shadow: -10px -10px 10px #00b7ef;
+}
+.linkText:hover{
+    color: #ebebeb;
+    text-shadow: 2px 2px 1px #00b7ef;
+}

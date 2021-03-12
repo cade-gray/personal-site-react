@@ -1,20 +1,18 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Navigation from './Navigation/Navigation';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Logo from './Logo/Logo';
 import Home from './Home/Home';
 import Projects from './Projects/Projects'
-import About from './About/About'
+import ScrollToTop from './ScrollToTop';
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="App">
-        <Navigation />
-        <div className="content" >
+          <Logo />
           <Route exact path='/' component={Home} />
           <Route path='/projects' component={Projects} />
-          <Route path='/about' component={About} />
-        </div>
       </div>
     </Router>
   );
