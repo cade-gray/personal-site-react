@@ -7,6 +7,10 @@
     text-shadow: 0px 8px 9px #00B6EF;
     color:#ebebeb;
 }
+.logo:hover{
+    text-shadow: 0px 8px 9px #ebebeb;
+    color:#00B6EF;
+}
 a{
     text-decoration: none;
 }
