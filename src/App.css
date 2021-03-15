@@ -1,4 +1,4 @@
-.App { 
+.App {
   font-family: comfortaa;
 }
 
@@ -11,21 +11,20 @@
 ::-webkit-scrollbar-track {
   color: transparent;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(0, 195, 255); 
+  background: rgb(0, 195, 255);
   border-radius: 5px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #333; 
+  background: #333;
 }
 /* Keep all pages the same width on mobile due to about page being different */
 @media screen and (max-width: 800px) {
-  .content{
+  .content {
     width: 100%;
   }
 }
-

@@ -1,13 +1,12 @@
-.projects-container{
+.projects-container {
 }
-.project-list-container{
-    display: flex;
-    flex-direction: column;
+.project-list-container {
+  display: flex;
+  flex-direction: column;
 }
-.project-comp{
-    margin: 100px;
+.project-comp {
+  margin: 100px;
 }
 
 @media screen and (max-width: 800px) {
-    
-   }
+}

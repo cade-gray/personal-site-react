@@ -1,56 +1,56 @@
-.socialCard{
-    display: grid;
-    grid-template-columns: auto auto auto auto auto auto;
-    grid-template-rows: auto;
-    background: #393939;
-    box-shadow: 10px 10px 10px #00b7ef;
-    height: 15rem;
-    width: 100%;
+.socialCard {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  grid-template-rows: auto;
+  background: #393939;
+  box-shadow: 10px 10px 10px #00b7ef;
+  height: 15rem;
+  width: 100%;
 }
-.socialItem{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    pointer-events: none;
+.socialItem {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  pointer-events: none;
 }
-.socialItem:hover{
-    transform: scale(1.1);
-    box-shadow: 0px 0px 10px 5px #00b7ef;
+.socialItem:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px 5px #00b7ef;
 }
-.socialSVG{
-    height: 4rem;
-    width: 4rem;
-    pointer-events: auto;
+.socialSVG {
+  height: 4rem;
+  width: 4rem;
+  pointer-events: auto;
 }
-.socialSVG:hover{
-    transform: scale(1.5);
+.socialSVG:hover {
+  transform: scale(1.5);
 }
-#twitter{
-    background: #1DA1F2;
+#twitter {
+  background: #1da1f2;
 }
-#instagram{
-    background: #E4405F;
+#instagram {
+  background: #e4405f;
 }
-#github{
-    background: #181717;
+#github {
+  background: #181717;
 }
-#codepen{
-    background: #ffffff;
+#codepen {
+  background: #ffffff;
 }
-#youtube{
-    background: #FF0000;
+#youtube {
+  background: #ff0000;
 }
-#linkedin{
-    background: #0077B5;
+#linkedin {
+  background: #0077b5;
 }
 @media screen and (max-width: 800px) {
-    .socialCard{
-        grid-template-columns: auto auto;
-    }
-    .socialSVG{
-        height: 2rem;
-        width: 2rem;
-    } 
+  .socialCard {
+    grid-template-columns: auto auto;
   }
+  .socialSVG {
+    height: 2rem;
+    width: 2rem;
+  }
+}

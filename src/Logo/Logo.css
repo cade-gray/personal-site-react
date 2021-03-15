@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
-.logo{
-    font-family: 'Permanent Marker', cursive;
-    margin: 0;
-    margin-left: 1rem;
-    font-size: 3rem;
-    text-shadow: 0px 8px 9px #00B6EF;
-    color:#ebebeb;
+@import url("https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap");
+.logo {
+  font-family: "Permanent Marker", cursive;
+  margin: 0;
+  margin-left: 1rem;
+  font-size: 3rem;
+  text-shadow: 0px 8px 9px #00b6ef;
+  color: #ebebeb;
 }
-.logo:hover{
-    text-shadow: 0px 8px 9px #ebebeb;
-    color:#00B6EF;
+.logo:hover {
+  text-shadow: 0px 8px 9px #ebebeb;
+  color: #00b6ef;
 }
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }

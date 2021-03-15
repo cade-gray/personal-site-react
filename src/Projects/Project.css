@@ -1,51 +1,51 @@
-.projImg{
-    height: 50%;
-    width: 75%;
-    box-shadow: 0px 13px 16px rgba(0, 0, 0, 0.25);
-    margin: 3rem;
+.projImg {
+  height: 50%;
+  width: 75%;
+  box-shadow: 0px 13px 16px rgba(0, 0, 0, 0.25);
+  margin: 3rem;
 }
-.projContainer{
-    padding: 3rem;
-    margin: 3rem;
-    background: #393939;
-    box-shadow: 10px 10px 10px #00b7ef;
-    text-align: justify;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.projContainer {
+  padding: 3rem;
+  margin: 3rem;
+  background: #393939;
+  box-shadow: 10px 10px 10px #00b7ef;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.projName{
-    text-align: center;
+.projName {
+  text-align: center;
 }
-.desc{
-    text-align: left;
-    padding: 10px;
-    font-size: 1rem;
+.desc {
+  text-align: left;
+  padding: 10px;
+  font-size: 1rem;
 }
-.githubLink{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+.githubLink {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
-.githubSVG{
-    height: 2rem;
-    width: 2rem;
+.githubSVG {
+  height: 2rem;
+  width: 2rem;
 }
 .githubSVG:hover {
-    transform: scale(1.5);
+  transform: scale(1.5);
 }
-.githubText{
-    font-size: .7rem;
+.githubText {
+  font-size: 0.7rem;
 }
 @media screen and (max-width: 800px) {
-    .projContainer{
-        padding: 1rem;
-        margin: 1rem;
-    }
-    .projImg{
-        margin: 1rem;
-    }
-    .desc{
-        font-size: .8rem;
-    }
+  .projContainer {
+    padding: 1rem;
+    margin: 1rem;
   }
+  .projImg {
+    margin: 1rem;
+  }
+  .desc {
+    font-size: 0.8rem;
+  }
+}
