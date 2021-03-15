@@ -24,7 +24,6 @@ const projects = () => {
           projDesc="For my Advanced Web Development class, we were required to construct a javascript application that showcased Radford University's Information Technology Majors and their corresponding concentrations.  The user could then view 3 classes that are specific to the selected concentraton. This application implemented HTML, CSS, JavaScript, and jQuery."
         />
         <Project
-          className="project-comp"
           imgURL={[vaultairePic]}
           projName="The Vault"
           githubLink={false}
