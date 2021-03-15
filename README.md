@@ -5,11 +5,14 @@
 - React (Create React App)
 - React Router
 - Future Features:
-  - Prettier.js for cleaning up code
   - Styled Components
 
 ## Hosting
 
-- DigitalOcean VPS
+- [DigitalOcean Droplet](https://www.digitalocean.com/products/droplets/)
 - Nginx Web Server
 - Google Domains
+
+## Tooling
+
+- [Prettier.js](https://prettier.io/) for formatting of code.
