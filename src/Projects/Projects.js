@@ -14,7 +14,7 @@ const projects = () => {
         <Project
           imgURL={[colorPal1, colorPal2, colorPal3]}
           projName="Color Pal-ette"
-          githubLink="https://github.com/cade-gray/ColorPalClient"
+          githubLink="https://github.com/cade-gray/ColorPal"
           projDesc="For my final project in my Advanced Web development class, I was required to create a full stack web application.  I chose to create a platform where developers and designers can create color palettes and discover new ones.  I used React.js for the front end and used Express.js and MongoDB for the back end."
         />
         <Project
