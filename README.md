@@ -4,12 +4,10 @@
 
 - React (Create React App)
 - React Router
-- Future Features:
-  - Styled Components
 
-## Hosting
+## Deployment
 
-- [DigitalOcean Droplet](https://www.digitalocean.com/products/droplets/)
+- Digital Ocean
 - Nginx Web Server
 - Google Domains
 
