@@ -4,7 +4,8 @@ export default function Footer() {
   return (
     <div className="footer">
       <h3>
-        Contact: <i>cadegrayweb@gmail.com</i>
+        Contact:{" "}
+        <a href="mailto:cadegrayweb@gmail.com">cadegrayweb@gmail.com</a>
       </h3>
       <p>
         Website developed Using <a href={"https://reactjs.org/"}>React</a>.
