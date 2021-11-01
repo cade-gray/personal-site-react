@@ -3,9 +3,9 @@
   grid-template-columns: auto auto auto auto auto auto;
   grid-template-rows: auto;
   background: #393939;
-  box-shadow: 10px 10px 10px #00b7ef;
   height: 15rem;
   width: 100%;
+  background: none;
 }
 .socialItem {
   width: 100%;
@@ -29,6 +29,8 @@
 }
 #twitter {
   background: #1da1f2;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
 }
 #instagram {
   background: #e4405f;
@@ -44,6 +46,8 @@
 }
 #linkedin {
   background: #0077b5;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
 }
 @media screen and (max-width: 800px) {
   .socialCard {

@@ -2,6 +2,7 @@
   padding: 3rem;
   background: #393939;
   box-shadow: 10px 10px 10px #00b7ef;
+  border-radius: 2rem;
 }
 .bioText {
   font-size: 1.5rem;
