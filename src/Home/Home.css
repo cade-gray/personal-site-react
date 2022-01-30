@@ -5,11 +5,11 @@
   margin: 3rem;
 }
 .about-me-text {
-  font-family: "Permanent Marker", cursive;
+  font-family: dimitri;
   margin: 1rem;
   text-align: center;
   font-size: 2rem;
-  text-shadow: 0px 8px 9px #00b6ef;
+  text-shadow: 0px 3px 3px #00b6ef;
   color: #ebebeb;
 }
 @media screen and (max-width: 800px) {

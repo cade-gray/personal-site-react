@@ -1,5 +1,8 @@
-@import url("https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap");
 @import url("//fonts.googleapis.com/css?family=Comfortaa");
+@font-face {
+  font-family: dimitri;
+  src: url(./DIMIS___.TTF);
+}
 html {
   font-size: 17px;
   height: 100%;

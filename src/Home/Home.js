@@ -6,9 +6,9 @@ import NavButton from "../NavButton/NavButton";
 const home = () => {
   return (
     <div className="container">
-      <h1 className="about-me-text">Developer and IT Professional</h1>
+      <h1 className="about-me-text">Developer and Systems Analyst</h1>
       <BioCard />
-      <NavButton label="View my projects" link="/projects" />
+      <NavButton label="Projects" link="/projects" />
       <SocialCard />
     </div>
   );
