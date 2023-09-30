@@ -5,6 +5,7 @@ import itecMajorPic from "../images/itecMajorViewer.png";
 import colorPal1 from "../images/colorPalHome.png";
 import colorPal2 from "../images/colorPalCreate.png";
 import colorPal3 from "../images/colorPalProfile.png";
+import weddingSiteHome from "../images/weddingSiteHome.png";
 import Project from "./Project";
 
 const projects = () => {
@@ -12,10 +13,16 @@ const projects = () => {
     <div className="projects-container">
       <div className="project-list-container">
         <Project
+          imgURL={[weddingSiteHome]}
+          projName="Wedding Site"
+          githubLink="https://github.com/cade-gray/wedding-site"
+          projDesc="This was created for my own wedding! We needed a place to share information regarding our wedding so I created this.  It is using Svelte and SvelteKit for the front end and I also built a REST API using NodeJS and the Express framework to handle recieving RSVP data and inserting into a MySQL database. I also created the background using SVGs created with Figma and a Wacom tablet, drawing is not a strength of mine."
+        />
+        <Project
           imgURL={[colorPal1, colorPal2, colorPal3]}
           projName="Color Pal-ette"
           githubLink="https://github.com/cade-gray/ColorPal"
-          projDesc="For my final project in my Advanced Web development class, I was required to create a full stack web application.  I chose to create a platform where developers and designers can create color palettes and discover new ones.  I used React.js for the front end and used Express.js and MongoDB for the back end."
+          projDesc="For my final project in my Advanced Web development class, I was required to create a full stack web application.  I chose to create a platform where developers and designers can create color palettes and discover new ones.  I used React.js for the front end and used NodeJS and the Express frameork for the back end to handle sending and recieving data to MongoDB NoSQL database."
         />
         <Project
           imgURL={[itecMajorPic]}
