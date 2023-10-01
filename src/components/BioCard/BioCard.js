@@ -1,6 +1,6 @@
 import React from "react";
 import "./BioCard.css";
-var bioText = require("../BioCard/bioText.js");
+var bioText = require("./bioText.js");
 
 export default function BioCard() {
   return (

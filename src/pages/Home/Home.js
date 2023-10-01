@@ -1,8 +1,8 @@
 import React from "react";
 import "./Home.css";
-import SocialCard from "../SocialCard/SocialCard";
-import BioCard from "../BioCard/BioCard";
-import NavButton from "../NavButton/NavButton";
+import SocialCard from "../../components/SocialCard/SocialCard";
+import BioCard from "../../components/BioCard/BioCard";
+import NavButton from "../../components/NavButton/NavButton";
 const home = () => {
   return (
     <div className="container">

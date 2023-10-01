@@ -1,12 +1,12 @@
 import React from "react";
 import "./Projects.css";
-import vaultairePic from "../images/vaultaire.jpg";
-import itecMajorPic from "../images/itecMajorViewer.png";
-import colorPal1 from "../images/colorPalHome.png";
-import colorPal2 from "../images/colorPalCreate.png";
-import colorPal3 from "../images/colorPalProfile.png";
-import weddingSiteHome from "../images/weddingSiteHome.png";
-import Project from "./Project";
+import vaultairePic from "../../images/vaultaire.jpg";
+import itecMajorPic from "../../images/itecMajorViewer.png";
+import colorPal1 from "../../images/colorPalHome.png";
+import colorPal2 from "../../images/colorPalCreate.png";
+import colorPal3 from "../../images/colorPalProfile.png";
+import weddingSiteHome from "../../images/weddingSiteHome.png";
+import Project from "../../components/Project/Project";
 
 const projects = () => {
   return (

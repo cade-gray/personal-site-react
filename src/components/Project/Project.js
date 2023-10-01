@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Project.css";
-import { ReactComponent as GithubSVG } from "./github.svg";
+import { ReactComponent as GithubSVG } from "./assets/github.svg";
 class Project extends Component {
   render() {
     return (
