@@ -6,7 +6,7 @@ import Home from "./pages/Home/Home";
 import Projects from "./pages/Projects/Projects";
 import ScrollToTop from "./lib/ScrollToTop";
 import Footer from "./components/Footer/Footer";
-import Test from "./pages/Test";
+import About from "./pages/About/About";
 function App() {
   return (
     <Router>
@@ -16,7 +16,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/projects" component={Projects} />
-          <Route path="/test" component={Test} />
+          <Route path="/about" component={About} />
         </Switch>
         <Footer />
       </div>
