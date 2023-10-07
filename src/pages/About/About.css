@@ -1,0 +1,11 @@
+.aboutContainer {
+  padding: 3rem;
+  margin: 3rem;
+  background: #393939;
+  box-shadow: 10px 10px 10px #00b7ef;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 2rem;
+}
