@@ -8,6 +8,7 @@ const home = () => {
     <div className="container">
       <h1 className="about-me-text">Developer and Systems Analyst</h1>
       <BioCard />
+      <NavButton label="About Me" link="/about" />
       <NavButton label="Projects" link="/projects" />
       <SocialCard />
     </div>
