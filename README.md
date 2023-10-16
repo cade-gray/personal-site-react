@@ -10,7 +10,3 @@
 - Digital Ocean
 - Nginx Web Server
 - Google Domains
-
-## Tooling
-
-- [Prettier.js](https://prettier.io/) for formatting of code.
