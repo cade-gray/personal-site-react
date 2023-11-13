@@ -6,10 +6,10 @@ class Project extends Component {
     return (
       <div className="projContainer">
         <h2 className="projName">{this.props.projName}</h2>
+        <p className="desc">{this.props.projDesc}</p>
         {this.props.imgURL.map((image) => {
           return <img className="projImg" src={image} alt=""></img>;
         })}
-        <p className="desc">{this.props.projDesc}</p>
         {/* If there is a github link for the project, it will render out a link */}
         {this.props.githubLink && (
           <div className="githubLink">
