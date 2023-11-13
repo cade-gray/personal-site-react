@@ -1,6 +1,6 @@
 .socialCard {
   display: grid;
-  grid-template-columns: auto auto auto auto auto auto;
+  grid-template-columns: auto auto auto auto;
   grid-template-rows: auto;
   background: #393939;
   height: 15rem;
@@ -32,14 +32,8 @@
   border-top-left-radius: 2rem;
   border-bottom-left-radius: 2rem;
 }
-#instagram {
-  background: #e4405f;
-}
 #github {
   background: #181717;
-}
-#codepen {
-  background: #ffffff;
 }
 #youtube {
   background: #ff0000;
@@ -62,7 +56,7 @@
     border-bottom-left-radius: 0px;
     border-top-right-radius: 0px;
   }
-  #instagram {
+  #github {
     border-top-right-radius: 2rem;
   }
   #youtube {
