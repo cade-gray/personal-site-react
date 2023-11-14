@@ -10,6 +10,7 @@ const home = () => {
       <BioCard />
       <NavButton label="About Me" link="/about" />
       <NavButton label="Projects" link="/projects" />
+      <NavButton label="Blog" link="https://blog.cadegray.dev" ext="true" />
       <SocialCard />
     </div>
   );
