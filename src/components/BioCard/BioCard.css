@@ -1,20 +1,20 @@
 .bioCard {
-  padding: 3rem;
+  padding: 2rem;
   background: #393939;
   box-shadow: 10px 10px 10px #00b7ef;
   border-radius: 2rem;
+  text-align: center;
 }
 .bioText {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   line-height: 1.7;
 }
 @media screen and (max-width: 800px) {
   .bioText {
-    font-size: 0.6rem;
+    font-size: 1rem;
   }
   .bioCard {
-    padding-left: 2rem;
-    padding-right: 2rem;
     margin: 1rem;
+    padding: 1rem;
   }
 }
