@@ -4,19 +4,17 @@ import { Link } from "react-router-dom";
 export default function NavButton(props) {
   if (!props.ext) {
     return (
-      <div className="navButton">
-        <Link to={props.link}>
+      <Link to={props.link} className="navButton">
+        <div className="linkContainer">
           <span className="linkText">{props.label}</span>
-        </Link>
-      </div>
+        </div>
+      </Link>
     );
   } else {
     return (
-      <div className="navButton">
-        <a href={props.link}>
-          <span className="linkText">{props.label}</span>
-        </a>
-      </div>
+      <a href={props.link} className="navButton">
+        <span className="linkText">{props.label}</span>
+      </a>
     );
   }
 }
