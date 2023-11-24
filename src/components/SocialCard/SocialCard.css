@@ -13,20 +13,19 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  pointer-events: none;
 }
 .socialItem:hover {
   transform: scale(1.1);
   box-shadow: 0px 0px 10px 5px #00b7ef;
+  .socialSVG {
+    transform: scale(1.5);
+  }
 }
 .socialSVG {
   height: 4rem;
   width: 4rem;
-  pointer-events: auto;
 }
-.socialSVG:hover {
-  transform: scale(1.5);
-}
+
 #twitter {
   background: #1da1f2;
   border-top-left-radius: 2rem;

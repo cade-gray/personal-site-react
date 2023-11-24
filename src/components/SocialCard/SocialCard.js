@@ -8,32 +8,34 @@ import { ReactComponent as LinkedinSVG } from "./Assets/linkedin.svg";
 export default function SocialCard() {
   return (
     <div className="socialCard">
-      <div className="socialItem" id="twitter">
-        <a href={"https://twitter.com/cadegraydev"} className="socialLink">
-          <TwitterSVG className="socialSVG" />
-        </a>
-      </div>
-      <div className="socialItem" id="github">
-        <a href={"https://github.com/cade-gray"} className="socialLink">
-          <GithubSVG className="socialSVG" />
-        </a>
-      </div>
-      <div className="socialItem" id="youtube">
-        <a
-          href={"https://www.youtube.com/channel/UCMRm15GqwPX41UTwDXddyyg"}
-          className="socialLink"
-        >
-          <YoutubeSVG className="socialSVG" />
-        </a>
-      </div>
-      <div className="socialItem" id="linkedin">
-        <a
-          href={"https://www.linkedin.com/in/cade-gray-78435312a/"}
-          className="socialLink"
-        >
-          <LinkedinSVG className="socialSVG" />
-        </a>
-      </div>
+      <a
+        href={"https://twitter.com/cadegraydev"}
+        className="socialItem"
+        id="twitter"
+      >
+        <TwitterSVG className="socialSVG" />
+      </a>
+      <a
+        href={"https://github.com/cade-gray"}
+        className="socialItem"
+        id="github"
+      >
+        <GithubSVG className="socialSVG" />
+      </a>
+      <a
+        href={"https://www.youtube.com/channel/UCMRm15GqwPX41UTwDXddyyg"}
+        className="socialItem"
+        id="youtube"
+      >
+        <YoutubeSVG className="socialSVG" />
+      </a>
+      <a
+        href={"https://www.linkedin.com/in/cade-gray-78435312a/"}
+        className="socialItem"
+        id="linkedin"
+      >
+        <LinkedinSVG className="socialSVG" />
+      </a>
     </div>
   );
 }
