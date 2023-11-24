@@ -1,7 +1,5 @@
 .logo {
   font-family: dimitri;
-  margin: 0;
-  margin-left: 1rem;
   font-size: 3rem;
   text-shadow: 0px 3px 3px #00b6ef;
   color: #ebebeb;
@@ -10,6 +8,10 @@
   text-shadow: 0px 3px 3px #ebebeb;
   color: #00b6ef;
 }
+.logoContainer {
+  padding-top: 2rem;
+  padding-left: 2rem;
+}
 a {
   text-decoration: none;
 }
@@ -17,7 +19,13 @@ h1 {
   margin: 0;
 }
 @media screen and (max-width: 800px) {
+  .logoContainer {
+    padding-left: 0rem;
+  }
   .logo {
     font-size: 3rem;
+  }
+  h1 {
+    text-align: center;
   }
 }
