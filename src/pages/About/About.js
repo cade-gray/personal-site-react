@@ -46,6 +46,7 @@ const About = () => {
           <li>Building services that intereact with API's</li>
         </ul>
         <li>PowerShell</li>
+        <li>Bash Scripting</li>
         <li>Java</li>
         <li>Docker</li>
       </ul>
