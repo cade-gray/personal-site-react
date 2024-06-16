@@ -13,7 +13,7 @@ export default function Footer() {
       </p>
       <p>
         View this site's code on{" "}
-        <a href={"https://github.com/cade-gray/personal-site-v2"}>GitHub</a>.
+        <a href={"https://github.com/cade-gray/personal-site-react"}>GitHub</a>.
       </p>
     </div>
   );
