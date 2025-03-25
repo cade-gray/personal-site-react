@@ -1,12 +1,12 @@
 .logo {
   font-family: dimitri;
   font-size: 3rem;
-  text-shadow: 0px 3px 3px #00b6ef;
+  text-shadow: 0px 3px 3px #00cf94;
   color: #ebebeb;
 }
 .logo:hover {
   text-shadow: 0px 3px 3px #ebebeb;
-  color: #00b6ef;
+  color: #00cf94;
 }
 .logoContainer {
   padding-top: 2rem;
