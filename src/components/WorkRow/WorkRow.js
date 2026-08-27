@@ -2,34 +2,8 @@ import React, { useState } from "react";
 import { ReactComponent as GithubSVG } from "./assets/github.svg";
 import "./WorkRow.css";
 
-/*
- * Splits a description into a lead the row shows collapsed and the remainder
- * revealed by the toggle. Breaks on a sentence boundary so neither half reads
- * like it was cut off.
- */
-export function splitDescription(text, target = 240) {
-  const full = (text || "").trim();
-  if (full.length <= target) return [full, ""];
-
-  const boundary = /[.!?]\s+/g;
-  let cut = -1;
-  let match = boundary.exec(full);
-  while (match) {
-    const end = match.index + 1;
-    if (end >= target) {
-      cut = end;
-      break;
-    }
-    cut = end;
-    match = boundary.exec(full);
-  }
-  if (cut <= 0 || cut >= full.length) return [full, ""];
-  return [full.slice(0, cut).trim(), full.slice(cut).trim()];
-}
-
-export default function WorkRow({ num, name, description, repo, tech }) {
+export default function WorkRow({ num, name, tech, lead, detail, repo, site }) {
   const [open, setOpen] = useState(false);
-  const [lead, rest] = splitDescription(description);
 
   return (
     <article className="work-row">
@@ -42,10 +16,10 @@ export default function WorkRow({ num, name, description, repo, tech }) {
       <div className="work-row__body">
         <p className="work-row__lead">{lead}</p>
 
-        {open && rest && <p className="work-row__rest">{rest}</p>}
+        {open && detail && <p className="work-row__rest">{detail}</p>}
 
         <div className="work-row__actions">
-          {rest && (
+          {detail && (
             <button
               type="button"
               className="work-row__toggle"
@@ -54,6 +28,11 @@ export default function WorkRow({ num, name, description, repo, tech }) {
             >
               {open ? "Show less ↑" : "How it works ↓"}
             </button>
+          )}
+          {site && (
+            <a className="work-row__site" href={site}>
+              Visit the site<span>→</span>
+            </a>
           )}
           {repo && (
             <a className="work-row__repo" href={repo}>

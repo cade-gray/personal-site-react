@@ -1,34 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import Reveal from "../../components/Reveal/Reveal";
 import SocialLinks from "../../components/SocialLinks/SocialLinks";
 import StackGrid from "../../components/StackGrid/StackGrid";
 import WorkRow from "../../components/WorkRow/WorkRow";
 import { BEYOND_CODE, CAPABILITIES } from "../../data/stack";
+import { PROJECTS } from "../../data/projects";
 import "./Home.css";
 
 const EMAIL = "mailto:cadegrayweb@gmail.com";
-const FEATURED_COUNT = 3;
 
 export default function Home() {
-  const [projects, setProjects] = useState([]);
-  const [status, setStatus] = useState("loading");
-
-  useEffect(() => {
-    let live = true;
-    fetch("https://api.cadegray.dev/projects")
-      .then((res) => res.json())
-      .then((data) => {
-        if (!live) return;
-        setProjects(Array.isArray(data) ? data.slice(0, FEATURED_COUNT) : []);
-        setStatus("ready");
-      })
-      .catch(() => live && setStatus("error"));
-    return () => {
-      live = false;
-    };
-  }, []);
-
   return (
     <div className="home">
       {/* Hero ---------------------------------------------------------- */}
@@ -80,7 +62,7 @@ export default function Home() {
             </div>
             <div className="currently__row">
               <dt>Building</dt>
-              <dd>A personal API, an admin platform, and Jokedle</dd>
+              <dd>PlateFind, Jokedle, and a Go API template</dd>
             </div>
             <div className="currently__row">
               <dt>Writing</dt>
@@ -135,28 +117,19 @@ export default function Home() {
         </Reveal>
 
         <div className="work">
-          {status === "loading" &&
-            [0, 1, 2].map((i) => <div key={i} className="work__skeleton" />)}
-
-          {status === "error" && (
-            <p className="work__error">
-              Couldn’t load projects just now —{" "}
-              <Link to="/projects">try the projects page</Link>.
-            </p>
-          )}
-
-          {status === "ready" &&
-            projects.map((project, i) => (
-              <Reveal key={project.projectId} delay={i * 80}>
-                <WorkRow
-                  num={String(i + 1).padStart(2, "0")}
-                  name={project.projectName}
-                  description={project.projectDescription}
-                  repo={project.projectRepo}
-                  tech={project.projectTech}
-                />
-              </Reveal>
-            ))}
+          {PROJECTS.map((project, i) => (
+            <Reveal key={project.id} delay={i * 80}>
+              <WorkRow
+                num={String(i + 1).padStart(2, "0")}
+                name={project.name}
+                tech={project.tech}
+                lead={project.lead}
+                detail={project.detail}
+                site={project.site}
+                repo={project.repo}
+              />
+            </Reveal>
+          ))}
         </div>
       </section>
 

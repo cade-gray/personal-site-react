@@ -92,6 +92,7 @@
 }
 .work-row__toggle:hover { color: var(--text); }
 
+.work-row__site,
 .work-row__repo {
   display: inline-flex;
   align-items: center;
@@ -100,7 +101,14 @@
   font-size: 0.8125rem;
   color: var(--soft);
 }
+.work-row__site:hover,
 .work-row__repo:hover { color: var(--accent); }
+
+.work-row__site span {
+  display: inline-block;
+  transition: transform 0.22s ease;
+}
+.work-row__site:hover span { transform: translateX(4px); }
 
 .work-row__repo-icon {
   width: 16px;
@@ -117,6 +125,7 @@
   .work-row__name { font-size: 1.3125rem; }
   .work-row__actions { gap: 8px; }
   .work-row__toggle,
+  .work-row__site,
   .work-row__repo {
     flex: 1 1 auto;
     justify-content: center;
