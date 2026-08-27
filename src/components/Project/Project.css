@@ -1,52 +1,84 @@
-.projImg {
-  height: 50%;
-  width: 75%;
-  box-shadow: 0px 13px 16px rgba(0, 0, 0, 0.25);
-  margin: 3rem;
+.project {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 40px;
+  align-items: center;
+  padding: 34px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  background: var(--surface);
+  transition: border-color 0.25s ease, background-color 0.25s ease,
+    transform 0.25s ease;
 }
-.projContainer {
-  padding: 3rem;
-  margin: 1rem;
-  background: #393939;
-  box-shadow: 10px 10px 10px #00cf94;
-  text-align: justify;
+.project:hover {
+  border-color: var(--accent-line);
+  background: var(--surface-hover);
+  transform: translateY(-2px);
+}
+
+/* Text-only entries should not leave half the card empty. */
+.project--text {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.project__copy {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.project__name {
+  font-size: 1.5625rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.project__desc {
+  font-size: 0.9375rem;
+  line-height: 1.72;
+  color: var(--body);
+}
+
+.project__repo {
+  display: inline-flex;
   align-items: center;
-  border-radius: 2rem;
+  gap: 9px;
+  min-height: 44px;
+  font-size: 0.8125rem;
+  color: var(--soft);
 }
-.projName {
-  text-align: center;
+.project__repo:hover { color: var(--accent); }
+
+.project__repo-icon {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
 }
-.desc {
-  text-align: left;
-  padding: 10px;
-  font-size: 1rem;
-}
-.githubLink {
+
+.project__shots {
   display: flex;
-  align-items: center;
   flex-direction: column;
+  gap: 16px;
 }
-.githubSVG {
-  height: 2rem;
-  width: 2rem;
+
+.project__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--r-sm);
 }
-.githubSVG:hover {
-  transform: scale(1.5);
-}
-.githubText {
-  font-size: 0.7rem;
-}
+
 @media screen and (max-width: 800px) {
-  .projContainer {
-    padding: 1rem;
-    margin: 1rem;
+  .project {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 24px;
   }
-  .projImg {
-    margin: 1rem;
-  }
-  .desc {
-    font-size: 0.8rem;
-  }
+  .project__name { font-size: 1.3125rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project:hover { transform: none; }
 }

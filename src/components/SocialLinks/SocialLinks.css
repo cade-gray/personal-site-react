@@ -1,0 +1,43 @@
+/* Neutral tiles that light up on hover — the accent stays the one thing on the
+   page that pulls the eye, instead of four competing brand colours. */
+.socials {
+  display: flex;
+  gap: 12px;
+}
+
+.socials__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(235, 235, 235, 0.12);
+  border-radius: var(--r-sm);
+  background: var(--surface);
+  transition: border-color 0.2s ease, transform 0.18s ease;
+}
+.socials__item:hover {
+  border-color: rgba(235, 235, 235, 0.28);
+  transform: translateY(-3px);
+}
+
+.socials__svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--dim);
+  transition: fill 0.2s ease;
+}
+.socials__item:hover .socials__svg { fill: var(--text); }
+
+@media screen and (max-width: 800px) {
+  .socials { gap: 10px; }
+  .socials__item {
+    flex: 1 1 0;
+    width: auto;
+    height: 52px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .socials__item:hover { transform: none; }
+}

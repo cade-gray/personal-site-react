@@ -1,27 +1,30 @@
-import React, { Component } from "react";
-import "./Project.css";
+import React from "react";
 import { ReactComponent as GithubSVG } from "./assets/github.svg";
-class Project extends Component {
-  render() {
-    return (
-      <div className="projContainer">
-        <h2 className="projName">{this.props.projName}</h2>
-        <p className="desc">{this.props.projDesc}</p>
-        {this.props.imgURL.map((image) => {
-          return <img className="projImg" src={image} alt=""></img>;
-        })}
-        {/* If there is a github link for the project, it will render out a link */}
-        {this.props.githubLink && (
-          <div className="githubLink">
-            <a href={this.props.githubLink}>
-              <GithubSVG className="githubSVG" />
-            </a>
-            <p className="githubText">View the code on GitHub</p>
-          </div>
+import "./Project.css";
+
+export default function Project({ projName, projDesc, githubLink, imgURL }) {
+  const images = imgURL || [];
+
+  return (
+    <article className={"project" + (images.length ? "" : " project--text")}>
+      <div className="project__copy">
+        <h2 className="project__name">{projName}</h2>
+        <p className="project__desc">{projDesc}</p>
+        {githubLink && (
+          <a className="project__repo" href={githubLink}>
+            <GithubSVG className="project__repo-icon" />
+            View the code on GitHub
+          </a>
         )}
       </div>
-    );
-  }
-}
 
-export default Project;
+      {images.length > 0 && (
+        <div className="project__shots">
+          {images.map((image) => (
+            <img key={image} className="project__img" src={image} alt="" loading="lazy" />
+          ))}
+        </div>
+      )}
+    </article>
+  );
+}

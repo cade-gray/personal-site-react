@@ -1,0 +1,33 @@
+{
+  "artboards": [
+    {
+      "file": "Main.dc.html",
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 3400,
+      "title": "Landing page \u2014 desktop",
+      "is_interactive": true
+    },
+    {
+      "file": "Mobile.dc.html",
+      "x": 1560,
+      "y": 0,
+      "w": 390,
+      "h": 5500,
+      "title": "Landing page \u2014 mobile",
+      "is_interactive": true
+    },
+    {
+      "file": "System.dc.html",
+      "x": 2070,
+      "y": 0,
+      "w": 900,
+      "h": 2200,
+      "title": "Design system reference"
+    }
+  ],
+  "launch": {
+    "view": "canvas"
+  }
+}

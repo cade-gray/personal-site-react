@@ -1,0 +1,59 @@
+/* Design tokens. Values lifted from the design canvas — change them here, not inline. */
+:root {
+  /* Surface */
+  --bg: #121212;
+  --surface: #17191a;
+  --surface-hover: #191c1b;
+  --line: rgba(235, 235, 235, 0.1);
+  --line-strong: rgba(235, 235, 235, 0.13);
+  --line-input: rgba(235, 235, 235, 0.18);
+
+  /* Ink */
+  --text: #ebebeb;
+  --body: #a8b0ad;
+  --soft: #b9c0be;
+  --dim: #8d9693;
+  --muted: #6f7876;
+
+  /* Accent */
+  --accent: #00cf94;
+  --on-accent: #08110e;
+  --accent-hover: color-mix(in oklab, var(--accent) 82%, #ffffff);
+  --accent-line: color-mix(in oklab, var(--accent) 34%, transparent);
+  --accent-wash: color-mix(in oklab, var(--accent) 13%, transparent);
+  --accent-edge: color-mix(in oklab, var(--accent) 28%, transparent);
+  --accent-hairline: color-mix(in oklab, var(--accent) 20%, transparent);
+
+  /* Translucent accent tint for the header / footer bands. Semi-opaque so the
+     wave layer still reads through it at lower contrast. */
+  --tint-edge: color-mix(in oklab, var(--accent) 9%, rgba(18, 18, 18, 0.86));
+  --tint-fade: color-mix(in oklab, var(--accent) 4%, rgba(18, 18, 18, 0.42));
+
+  /* Shape */
+  --r-lg: 20px;
+  --r-md: 16px;
+  --r-sm: 12px;
+  --r-btn: 10px;
+  --r-chip: 8px;
+  --r-pill: 999px;
+
+  /* Type */
+  --font-display: dimitri, "Brush Script MT", cursive;
+  --font-sans: Comfortaa, "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* Motion */
+  --ease: cubic-bezier(0.22, 0.68, 0.36, 1);
+  --reveal: 0.8s;
+
+  /* Layout */
+  --gutter: 160px;
+  --measure: 1120px;
+}
+
+@media screen and (max-width: 1180px) {
+  :root { --gutter: 64px; }
+}
+@media screen and (max-width: 800px) {
+  :root { --gutter: 20px; }
+}

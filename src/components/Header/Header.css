@@ -1,0 +1,133 @@
+/* A translucent accent wash rather than a flat neutral bar: the waves still
+   run through it, just at lower contrast, and the band picks up the theme. */
+.header {
+  position: relative;
+  background: linear-gradient(180deg, var(--tint-edge) 0%, var(--tint-fade) 100%);
+  border-bottom: 1px solid var(--accent-hairline);
+}
+
+.header__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 14px var(--gutter);
+}
+
+.wordmark {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-height: 46px;
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  line-height: 1;
+  color: var(--text);
+}
+.wordmark::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  right: 2px;
+  bottom: 6px;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.34s var(--ease);
+}
+.wordmark:hover { color: var(--text); }
+.wordmark:hover::after { transform: scaleX(1); }
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.header__link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 14px;
+  font-size: 0.9375rem;
+  color: var(--soft);
+  transition: color 0.2s ease;
+}
+.header__link::after {
+  content: "";
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 8px;
+  height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.22s ease;
+}
+.header__link:hover { color: var(--text); }
+.header__link:hover::after { transform: scaleX(1); }
+
+.header__cta {
+  margin-left: 12px;
+  min-height: 46px;
+  padding: 0 22px;
+  font-size: 0.9375rem;
+}
+
+.header__toggle {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-sm);
+  background: var(--surface);
+  cursor: pointer;
+}
+
+.header__bun {
+  width: 18px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--soft);
+  transition: background-color 0.2s ease;
+}
+.header__bun.is-open { background: var(--accent); }
+
+.header__sheet {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px var(--gutter) 20px;
+  border-top: 1px solid rgba(235, 235, 235, 0.08);
+  background: var(--tint-edge);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.header__sheet-link {
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  font-size: 1.0625rem;
+  color: var(--text);
+}
+.header__sheet-link:hover { color: var(--accent); }
+
+.header__sheet .btn {
+  margin-top: 10px;
+  min-height: 50px;
+}
+
+@media screen and (max-width: 800px) {
+  .header__nav { display: none; }
+  .header__toggle { display: flex; }
+  .wordmark { font-size: 2rem; }
+}
