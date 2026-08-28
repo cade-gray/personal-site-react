@@ -15,7 +15,7 @@
   overflow: visible;
 }
 
-/* One full period per cycle — the frame at the end is identical to the frame
+/* One full period per cycle, so the frame at the end is identical to the frame
    at the start, so there is no visible loop. */
 .wave-field__drift {
   animation: waveDrift 20s linear infinite;
