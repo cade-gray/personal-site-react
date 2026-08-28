@@ -29,12 +29,19 @@
 }
 .socials__item:hover .socials__svg { fill: var(--text); }
 
+/* Bigger tap targets on touch, but still square. `flex: 1 1 0` was the bug
+   here: .hero__intro is align-items: flex-start, so .socials never spans the
+   row, and a zero flex-basis collapsed each tile to the width of its icon. */
 @media screen and (max-width: 800px) {
-  .socials { gap: 10px; }
+  .socials { gap: 12px; }
   .socials__item {
-    flex: 1 1 0;
-    width: auto;
-    height: 52px;
+    flex: 0 0 auto;
+    width: 56px;
+    height: 56px;
+  }
+  .socials__svg {
+    width: 22px;
+    height: 22px;
   }
 }
 
