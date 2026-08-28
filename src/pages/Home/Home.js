@@ -30,9 +30,9 @@ export default function Home() {
           </h1>
 
           <Reveal as="p" className="hero__lead" delay={140}>
-            I am a Systems Analyst at one of the top credit unions in the U.S. A
-            lot of my work is getting vendor platforms to share data with each
-            other, along with building the web apps, APIs, and internal tooling
+            I am a Integrations Systems Analyst at one of the top credit unions in the United States. A
+            lot of my work is automating processes and integrating vendor platforms to share data with each
+            other, along with building the raw SQLs, APIs, and internal tooling
             around them.
           </Reveal>
 
@@ -57,23 +57,19 @@ export default function Home() {
           </p>
           <dl className="currently__list">
             <div className="currently__row">
-              <dt>Role</dt>
-              <dd>Systems Analyst, credit union IT</dd>
+              <dt>Working As</dt>
+              <dd>Integrations Systems Analyst, Eastman Credit Union IT</dd>
             </div>
             <div className="currently__row">
               <dt>Building</dt>
-              <dd>PlateFind, Jokedle, and a Go API template</dd>
+              <dd>
+                <a href="https://github.com/cade-gray">github.com/cade-gray</a>
+              </dd>
             </div>
             <div className="currently__row">
               <dt>Writing</dt>
               <dd>
                 <a href="https://blog.cadegray.dev">blog.cadegray.dev</a>
-              </dd>
-            </div>
-            <div className="currently__row">
-              <dt>Code</dt>
-              <dd>
-                <a href="https://github.com/cade-gray">github.com/cade-gray</a>
               </dd>
             </div>
           </dl>

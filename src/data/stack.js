@@ -7,10 +7,9 @@ export const STACK_FILTERS = [
 ];
 
 export const STACK = [
-  { name: "TypeScript", group: "lang" },
-  { name: "JavaScript", group: "lang" },
+  { name: "TypeScript/Javascript", group: "lang" },
   { name: "Go", group: "lang" },
-  { name: "SQL", group: "lang" },
+  { name: "SQL (PLSQL, TSQL, and PGSQL)", group: "lang" },
   { name: "Java", group: "lang" },
   { name: "PowerShell", group: "lang" },
   { name: "Bash", group: "lang" },
@@ -18,15 +17,15 @@ export const STACK = [
   { name: "Svelte / SvelteKit", group: "front" },
   { name: "Node.js", group: "back" },
   { name: "Express", group: "back" },
-  { name: "RESTful API design", group: "back" },
+  { name: "MuleSoft", group: "back" },
   { name: "Oracle", group: "back" },
   { name: "SQL Server / SSIS", group: "back" },
   { name: "MySQL", group: "back" },
-  { name: "ODBC", group: "back" },
+  { name: "Postgres", group: "back" },
   { name: "Docker", group: "ops" },
   { name: "PM2", group: "ops" },
-  { name: "Linux & Windows deploys", group: "ops" },
   { name: "DigitalOcean", group: "ops" },
+  { name: "Automic/Appworx for Batch Processing", group: "ops" },
 ];
 
 export const BEYOND_CODE = [
@@ -43,7 +42,7 @@ export const CAPABILITIES = [
   {
     num: "01",
     title: "Financial systems",
-    body: "I support the core applications a credit union runs on (Fiserv, MeridianLink, Jack Henry) and build the integrations that move data between them.",
+    body: "I support the core applications a credit union runs on (Fiserv DNA and CCM, MeridianLink, Visa) and build the integrations that move data between them.",
   },
   {
     num: "02",
