@@ -1,8 +1,14 @@
 /*
- * Project screenshots, keyed by a project's `image` field. Add an import here
- * once a capture exists; a project whose key is missing simply renders without
- * one, so this never breaks the build.
+ * Project screenshots, keyed by a project's `image` field. A project whose key
+ * is missing simply renders without one, so adding a capture is a one-line
+ * change and a missing file never breaks the build.
  */
-const SHOTS = {};
+import platefind from "./platefind.jpg";
+import jokedle from "./jokedle.jpg";
+
+const SHOTS = {
+  platefind,
+  jokedle,
+};
 
 export default SHOTS;

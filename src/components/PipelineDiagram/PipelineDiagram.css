@@ -74,8 +74,21 @@
   color: var(--muted);
 }
 
-/* Below the fold of a narrow card the row would squeeze the labels to nothing,
-   so the track becomes a column and the arrows turn to match. */
+/* In a narrow card the row squeezes every label onto three lines, so the track
+   becomes a column and the arrows turn to match. Keyed off the container rather
+   than the viewport: the constraint is the card column, which is half the page
+   wide on desktop. The media query is the fallback where containers are not
+   supported. */
+.pipeline--stacked .pipeline__track,
+.pipeline__track.is-stacked { flex-direction: column; }
+
+@container (max-width: 560px) {
+  .pipeline__track { flex-direction: column; }
+  .pipeline__stage { flex-direction: row; justify-content: flex-start; gap: 12px; text-align: left; }
+  .pipeline__label { flex: 1 1 auto; }
+  .pipeline__arrow { transform: rotate(90deg); }
+}
+
 @media screen and (max-width: 900px) {
   .pipeline__track { flex-direction: column; }
   .pipeline__stage { flex-direction: row; justify-content: flex-start; gap: 12px; text-align: left; }
