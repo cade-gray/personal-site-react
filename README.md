@@ -1,6 +1,6 @@
 # cadegray.dev
 
-Personal site — React 16 + react-router, built with create-react-app, served
+Personal site. React 16 + react-router, built with create-react-app, served
 from nginx in a container.
 
 ```bash
@@ -59,7 +59,7 @@ the reverse proxy for the domain at that port.
 | `VPS_HOST` | VPS hostname or IP |
 | `VPS_USER` | SSH user |
 | `VPS_SSH_KEY` | Private key for that user |
-| `VPS_PORT` | SSH port — optional, defaults to 22 |
+| `VPS_PORT` | SSH port, optional, defaults to 22 |
 
 The image is published as `ghcr.io/cade-gray/personal-site-react`. Note the
 repo's canonical name is `personal-site-react`; `personal-site-v2` is an

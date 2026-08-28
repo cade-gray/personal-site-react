@@ -43,16 +43,16 @@ export const CAPABILITIES = [
   {
     num: "01",
     title: "Financial systems",
-    body: "Supporting the critical applications a credit union runs on — Fiserv, MeridianLink, Jack Henry — and building the integrations that move data between platforms never designed to talk to each other.",
+    body: "I support the core applications a credit union runs on (Fiserv, MeridianLink, Jack Henry) and build the integrations that move data between them.",
   },
   {
     num: "02",
     title: "Internal tooling",
-    body: "Admin platforms, dashboards and automation that take manual work off people's desks and let a team make decisions from data instead of spreadsheets.",
+    body: "Admin sites, dashboards, and automation that take manual work off people's desks and give teams the data they need to make decisions.",
   },
   {
     num: "03",
     title: "Full-stack web",
-    body: "Apps, RESTful APIs and the containers and Linux boxes they run on. Deployed, monitored and maintained by me, on both Linux and Windows.",
+    body: "Web apps and RESTful APIs, plus the containers and servers they run on. I handle the deployment and the upkeep, on both Linux and Windows.",
   },
 ];
