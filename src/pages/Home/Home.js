@@ -30,15 +30,15 @@ export default function Home() {
           </h1>
 
           <Reveal as="p" className="hero__lead" delay={140}>
-            I am a Systems Analyst at one of the top credit unions in the U.S. A
-            lot of my work is getting vendor platforms to share data with each
-            other, along with building the web apps, APIs, and internal tooling
-            around them.
+            Systems Analyst at one of the top credit unions in the U.S. The
+            vendor platforms a financial institution runs on were never built to
+            talk to each other. I build what goes between them, and the web
+            apps, APIs and tooling around them.
           </Reveal>
 
           <Reveal className="hero__actions" delay={220}>
             <Link className="btn btn--primary" to="/projects">
-              See my projects
+              See selected work
             </Link>
             <a className="btn btn--ghost" href={EMAIL}>
               cadegrayweb@gmail.com
@@ -96,7 +96,7 @@ export default function Home() {
         <Reveal className="section__head">
           <div>
             <span className="eyebrow">Stack</span>
-            <h2 className="section__title">Tools I build with</h2>
+            <h2 className="section__title">Tools I actually ship with</h2>
           </div>
         </Reveal>
         <Reveal delay={80}>
@@ -108,8 +108,8 @@ export default function Home() {
       <section className="section">
         <Reveal className="section__head">
           <div>
-            <span className="eyebrow">Projects</span>
-            <h2 className="section__title">A few things I have built</h2>
+            <span className="eyebrow">Selected work</span>
+            <h2 className="section__title">Things I built and still run</h2>
           </div>
           <Link className="arrow-link" to="/projects">
             All projects<span>→</span>
@@ -138,14 +138,14 @@ export default function Home() {
         <Reveal>
           <span className="eyebrow">Beyond the code</span>
           <h2 className="section__title beyond__title">
-            What else my career has taught me
+            Good software is more than good syntax
           </h2>
         </Reveal>
         <Reveal className="beyond__lead" delay={80}>
           <p>
-            Working at a financial institution means writing the code is only
-            part of the job. These are the skills that help me get a project
-            approved, adopted, and actually used.
+            Working inside a regulated financial institution means the code is
+            the easy part. These are the skills that get a project approved,
+            adopted and kept alive.
           </p>
         </Reveal>
         <Reveal className="beyond__pills" delay={160}>
@@ -163,11 +163,11 @@ export default function Home() {
           <div className="glow contact__glow" />
           <div className="contact__copy">
             <h2 className="contact__title">
-              Hiring, or want to build something?
+              Hiring, or just want to build something?
             </h2>
             <p className="contact__body">
-              Send me a note about what you are working on and I will let you
-              know if I would be a good fit for it.
+              Tell me what you are working on and I will tell you honestly
+              whether I am the right person for it.
             </p>
           </div>
           <div className="contact__action">
