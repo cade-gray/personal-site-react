@@ -38,7 +38,9 @@ export default function About() {
     <div className="about">
       <Reveal className="about__intro">
         <span className="eyebrow">About</span>
-        <h1 className="about__title">What I do for a living</h1>
+        <h1 className="about__title">
+          I work where the vendor platforms end.
+        </h1>
       </Reveal>
 
       <Reveal className="about__prose" delay={80}>
@@ -78,7 +80,9 @@ export default function About() {
       <section className="about__section">
         <Reveal>
           <span className="eyebrow">Beyond the code</span>
-          <h2 className="section__title">Other skills I have picked up</h2>
+          <h2 className="section__title">
+            What my career taught me that a repo cannot
+          </h2>
         </Reveal>
         <Reveal className="about__pills" delay={80}>
           {[

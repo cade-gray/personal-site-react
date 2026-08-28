@@ -1,8 +1,8 @@
 /*
- * The site's projects. These used to be fetched from api.cadegray.dev, but the
- * list is short and does not change much, so it lives here now. `lead` is what
- * a card shows collapsed and `detail` is what the toggle reveals, so WorkRow
- * does not have to guess where to split one blob of prose.
+ * The site's projects. Previously fetched from api.cadegray.dev; hardcoded now
+ * that the list is short and stable. `lead` is what a card shows collapsed and
+ * `detail` is revealed by the toggle, so WorkRow no longer has to guess where to
+ * split a single blob of prose.
  */
 export const PROJECTS = [
   {
@@ -12,9 +12,10 @@ export const PROJECTS = [
     site: "https://platefind.app",
     repo: "https://github.com/cade-gray/platefind",
     image: "platefind",
-    lead: "A browser based license plate game for road trips. The idea is to spot a plate from every state before the trip is over, and PlateFind keeps score for you. It covers all fifty states plus D.C., shows what is printed on each plate, and tracks how far along you are. I built it because the versions I found online and in the app stores were not great.",
+    lead:
+      "A browser based license plate road trip game that works better than the ones you find on Google or in the app stores. On a road trip the game is to spot a plate from every US state before the trip ends, and PlateFind is the scorecard: all fifty states plus D.C., what is printed on each plate, and how far you have got.",
     detail:
-      "The main thing I wanted was for it to keep working on a bad signal, which is pretty common on a road trip. The plate list is cached in localStorage and rendered right away on load, before any network request happens. A background refresh updates it once the API answers, and if that refresh fails the app keeps showing what it already had. A service worker caches the app shell and the fonts so it will open with no signal at all, and the header tells you which of six connection states you are in. The Nearby feature checks your location against rough state outlines to work out what state you are in, then lists that state and the ones it borders. All of that runs on the device, so it works offline too. Progress is saved under the same key the first version used, so nobody loses a trip.",
+      "The part I care about most is that it keeps working when the signal does not, which is exactly when you are on a road trip. The plate list is cached in localStorage and rendered immediately on load, before and without any network; a background refresh replaces it when the API answers, and a failed refresh never clears what is already there. A service worker caches the app shell and the webfonts so the app can be opened with no signal at all, and the header tells you which of six connection states you are in. Nearby watches the device's location and works out which state you are in by point-in-polygon against coarse state outlines, then lists that state and everything it borders, all on-device, so it keeps working out of signal too. Progress is stored under the same key the first version of the app used, so nobody loses a trip.",
   },
   {
     id: "jokedle",
@@ -23,9 +24,10 @@ export const PROJECTS = [
     site: "https://jokedle.com",
     repo: "https://github.com/cade-gray/jokedle-web",
     image: "jokedle",
-    lead: "A daily riddle game where you guess the punchline to a joke. You get one random joke a day. You start by picking five random letters, with a limit of two vowels, then guess a letter each turn. You can also go for the whole punchline if you think you have it.",
+    lead:
+      "A riddle game played daily where you guess the punchline to a joke. One random joke a day: you start by picking five random letters, limited to two vowels, then guess a letter each turn, or swing for the whole punchline if you think you have it.",
     detail:
-      "A wrong letter costs you a life, and so does a wrong guess at the punchline. Lose them all and the game is over. Reveal every letter and you win. Most of the work went into handling state: there is a loading state, a how to play state, and the in game state that has stages of its own, and all of it drives what gets rendered and the feedback the player sees. I gave each state its own component so the flow stays easy to follow as I add to the game.",
+      "A wrong letter costs a life, and so does a wrong guess at the full punchline; lose them all and the game is over, reveal every letter and you win. The interesting part is the state: loading, how-to, and an in-game state with stages of its own, all driving conditional rendering and a live feedback system that tells you where you stand. I gave each state its own component so the flow stays readable as the game grows.",
   },
   {
     id: "go-api-template",
@@ -33,8 +35,9 @@ export const PROJECTS = [
     tech: "Go · Gin · GORM · PostgreSQL · Docker",
     repo: "https://github.com/cade-gray/docker-go-demo",
     image: "pipeline",
-    lead: "A Dockerized Go API you can clone and have running on a VPS the same day. It uses Gin for routing, GORM with PostgreSQL, environment based config for dev and prod, and a GitHub Actions pipeline that builds the image, pushes it to the GitHub Container Registry, and deploys it to the server over SSH.",
+    lead:
+      "A Dockerized Go API you can clone and have running on a VPS in an afternoon. Gin for routing, GORM over PostgreSQL, environment-based configuration for dev and prod, and a GitHub Actions pipeline that builds the image, pushes it to the GitHub Container Registry, and deploys it to the box over SSH.",
     detail:
-      "I built it so I would stop wiring up the same plumbing every time I start a new API. It is also doing real work, since it is the service behind the plate data in PlateFind and the daily joke in Jokedle. Push to main and the workflow handles the rest: build, tag, push to ghcr.io, then pull and restart on the VPS with docker compose.",
+      "I built it as the foundation I reach for whenever I want a new API, rather than wiring the same plumbing together every time. It is also doing real work: it is the service behind the plate data in PlateFind and the daily joke in Jokedle, so the template gets tested by the things that depend on it. Push to main and the workflow takes it from there: build, tag, push to ghcr.io, pull and restart on the VPS with docker compose.",
   },
 ];

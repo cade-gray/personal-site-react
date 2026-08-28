@@ -47,11 +47,11 @@ export const CAPABILITIES = [
   {
     num: "02",
     title: "Internal tooling",
-    body: "Admin sites, dashboards, and automation that take manual work off people's desks and give teams the data they need to make decisions.",
+    body: "Admin platforms, dashboards and automation that take manual work off people's desks and let a team make decisions from data instead of spreadsheets.",
   },
   {
     num: "03",
     title: "Full-stack web",
-    body: "Web apps and RESTful APIs, plus the containers and servers they run on. I handle the deployment and the upkeep, on both Linux and Windows.",
+    body: "Apps, RESTful APIs and the containers and Linux boxes they run on. Deployed, monitored and maintained by me, on both Linux and Windows.",
   },
 ];

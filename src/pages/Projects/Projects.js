@@ -9,10 +9,10 @@ export default function Projects() {
     <div className="projects">
       <Reveal className="projects__head">
         <span className="eyebrow">Projects</span>
-        <h1 className="projects__title">Things I have built</h1>
+        <h1 className="projects__title">Things I built and still run</h1>
         <p className="projects__lead">
-          I designed, built, and deployed everything here, and I still maintain
-          all of it today.
+          Everything here is mine end to end: designed, built, deployed and
+          maintained. All of it is still in use.
         </p>
       </Reveal>
 
