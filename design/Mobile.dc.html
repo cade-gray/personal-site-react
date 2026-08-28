@@ -155,7 +155,7 @@
         <div style="height: 1px; background: rgba(235,235,235,0.08);"></div>
         <div style="display: flex; flex-direction: column; gap: 5px;">
           <span class="mono" style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #6f7876;">Building</span>
-          <span style="font-size: 15px; color: #ebebeb;">A personal API, an admin platform, and Jokedle</span>
+          <span style="font-size: 15px; color: #ebebeb;">PlateFind, Jokedle, and a Go API template</span>
         </div>
         <div style="height: 1px; background: rgba(235,235,235,0.08);"></div>
         <div style="display: flex; flex-direction: column; gap: 5px;">
@@ -216,12 +216,16 @@
         <div class="row rise" style="display: flex; flex-direction: column; align-items: flex-start; gap: 12px; padding: 24px; border: 1px solid rgba(235,235,235,0.10); border-radius: 16px; background: #17191a;">
           <span class="mono" style="font-size: 12px; letter-spacing: 0.14em; color: var(--accent);">{{ proj.num }}</span>
           <h3 style="margin: 0; font-size: 21px; font-weight: 700; line-height: 1.25; color: #ebebeb;">{{ proj.name }}</h3>
+          <span class="mono" style="font-size: 12px; line-height: 1.6; color: #6f7876;">{{ proj.tags }}</span>
           <p style="margin: 0; font-size: 15px; line-height: 1.68; color: #a8b0ad; text-wrap: pretty;">{{ proj.short }}</p>
           <sc-if value="{{ proj.open }}" hint-placeholder-val="{{ true }}">
             <p class="rise" style="margin: 0; padding-left: 14px; border-left: 2px solid color-mix(in oklab, var(--accent) 35%, transparent); font-size: 15px; line-height: 1.68; color: #8d9693; text-wrap: pretty;">{{ proj.long }}</p>
           </sc-if>
           <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px; width: 100%; padding-top: 4px;">
             <button class="more mono" type="button" onClick="{{ proj.toggle }}" style="display: flex; flex-grow: 1; align-items: center; justify-content: center; min-height: 46px; border: 1px solid color-mix(in oklab, var(--accent) 30%, transparent); border-radius: 10px; background: none; font-family: ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; color: var(--accent); cursor: pointer;">{{ proj.toggleLabel }}</button>
+            <sc-if value="{{ proj.site }}" hint-placeholder-val="{{ true }}">
+              <a href="{{ proj.site }}" style="display: flex; flex-grow: 1; align-items: center; justify-content: center; gap: 8px; min-height: 46px; border: 1px solid color-mix(in oklab, var(--accent) 30%, transparent); border-radius: 10px; font-size: 13px; color: var(--accent);">Visit the site</a>
+            </sc-if>
             <a href="{{ proj.repo }}" style="display: flex; flex-grow: 1; align-items: center; justify-content: center; gap: 9px; min-height: 46px; border: 1px solid rgba(235,235,235,0.13); border-radius: 10px; font-size: 13px; color: #b9c0be;"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>Code</a>
           </div>
         </div>
@@ -311,31 +315,33 @@ class Component extends DCLogic {
   projectDefs() {
     return [
       {
-        id: "jokedle",
+        id: "platefind",
         num: "01",
-        name: "Jokedle",
-        tags: "React · TypeScript · Personal API",
-        repo: "https://github.com/cade-gray/jokedle-web",
-        short: "A guess-the-punchline game built in React and TypeScript. Players reveal a joke's punchline letter by letter, Hangman style, or swing for the whole line at once.",
-        long: "The interesting part is state: loading, how-to, and an in-game state with stages of its own, all driving conditional rendering and a live feedback system. Each state is its own component, so the flow stays readable as the game grows."
+        name: "PlateFind",
+        tags: "React 19 · Vite · Tailwind v4 · Go API",
+        repo: "https://github.com/cade-gray/platefind",
+        site: "https://platefind.app",
+        short: "A browser based license plate road trip game that works better than the ones you find on Google or in the app stores. On a road trip the game is to spot a plate from every US state before the trip ends, and PlateFind is the scorecard — all fifty states plus D.C., what is printed on each plate, and how far you have got.",
+        long: "The part I care about most is that it keeps working when the signal does not, which is exactly when you are on a road trip. The plate list is cached in localStorage and rendered immediately on load, before and without any network; a background refresh replaces it when the API answers, and a failed refresh never clears what is already there. A service worker caches the app shell and the webfonts so the app can be opened with no signal at all, and the header tells you which of six connection states you are in. Nearby watches the device's location and works out which state you are in by point-in-polygon against coarse state outlines, then lists that state and everything it borders — all on-device, so it keeps working out of signal too. Progress is stored under the same key the first version of the app used, so nobody loses a trip."
       },
       {
-        id: "admin",
+        id: "jokedle",
         num: "02",
-        name: "Admin Platform",
-        tags: "React · Node · Cookie auth",
-        repo: "https://github.com/cade-gray/admin-site",
-        short: "A private control panel for everything else on this page, so shipping a change never means editing source, SSH-ing into the Linux box, or touching the database by hand.",
-        long: "Modules for queueing Jokedle's jokes and their sequence, exporting the wedding RSVP list, and managing the projects page you are reading right now. Username-and-password auth with cookie-backed sessions."
+        name: "Jokedle",
+        tags: "React · TypeScript",
+        repo: "https://github.com/cade-gray/jokedle-web",
+        site: "https://jokedle.com",
+        short: "A riddle game played daily where you guess the punchline to a joke. One random joke a day: you start by picking five random letters, limited to two vowels, then guess a letter each turn — or swing for the whole punchline if you think you have it.",
+        long: "A wrong letter costs a life, and so does a wrong guess at the full punchline; lose them all and the game is over, reveal every letter and you win. The interesting part is the state: loading, how-to, and an in-game state with stages of its own, all driving conditional rendering and a live feedback system that tells you where you stand. I gave each state its own component so the flow stays readable as the game grows."
       },
       {
-        id: "api",
+        id: "go-api-template",
         num: "03",
-        name: "Personal API",
-        tags: "Node · Express · Docker",
-        repo: "https://github.com/cade-gray/personal-api",
-        short: "The Node and Express service behind my projects, serving my personal database over one small REST surface. It is what fills the work section above.",
-        long: "dotenv for configuration, CORS for cross-origin access, body-parser for incoming requests, and middleware I wrote to authorize tokens on protected routes. Deployed as a Docker container so it builds, ships and moves between cloud providers without ceremony."
+        name: "Go API Template",
+        tags: "Go · Gin · GORM · PostgreSQL · Docker",
+        repo: "https://github.com/cade-gray/docker-go-demo",
+        short: "A Dockerized Go API you can clone and have running on a VPS in an afternoon. Gin for routing, GORM over PostgreSQL, environment-based configuration for dev and prod, and a GitHub Actions pipeline that builds the image, pushes it to the GitHub Container Registry, and deploys it to the box over SSH.",
+        long: "I built it as the foundation I reach for whenever I want a new API, rather than wiring the same plumbing together every time. It is also doing real work — it is the service behind the plate data in PlateFind and the daily joke in Jokedle, so the template gets tested by the things that depend on it. Push to main and the workflow takes it from there: build, tag, push to ghcr.io, pull and restart on the VPS with docker compose."
       }
     ];
   }
@@ -368,6 +374,8 @@ class Component extends DCLogic {
       return {
         num: p.num,
         name: p.name,
+        tags: p.tags,
+        site: p.site,
         repo: p.repo,
         short: p.short,
         long: p.long,
