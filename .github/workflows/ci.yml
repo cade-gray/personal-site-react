@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  pull_request:
+    branches: ["master"]
+  push:
+    branches: ["master"]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: personal-site-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      # react-scripts turns warnings into errors when CI is set, which Actions
+      # sets by default. Unused imports should not fail a deploy.
+      - name: Build
+        run: npm run build
+        env:
+          CI: false
+
+      - name: Build Docker image
+        run: docker build -t personal-site:ci .
