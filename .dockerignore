@@ -1,0 +1,10 @@
+node_modules
+build
+.git
+.github
+.gitignore
+*.md
+docker-compose.yml
+design
+.env*
+deploy.sh

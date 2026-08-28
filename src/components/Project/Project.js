@@ -1,27 +1,45 @@
-import React, { Component } from "react";
-import "./Project.css";
+import React from "react";
 import { ReactComponent as GithubSVG } from "./assets/github.svg";
-class Project extends Component {
-  render() {
-    return (
-      <div className="projContainer">
-        <h2 className="projName">{this.props.projName}</h2>
-        <p className="desc">{this.props.projDesc}</p>
-        {this.props.imgURL.map((image) => {
-          return <img className="projImg" src={image} alt=""></img>;
-        })}
-        {/* If there is a github link for the project, it will render out a link */}
-        {this.props.githubLink && (
-          <div className="githubLink">
-            <a href={this.props.githubLink}>
-              <GithubSVG className="githubSVG" />
-            </a>
-            <p className="githubText">View the code on GitHub</p>
-          </div>
-        )}
-      </div>
-    );
-  }
-}
+import PipelineDiagram from "../PipelineDiagram/PipelineDiagram";
+import SHOTS from "../../images/shots";
+import "./Project.css";
 
-export default Project;
+export default function Project({ name, tech, lead, detail, site, repo, image }) {
+  const shot = image && SHOTS[image];
+  const visual = image === "pipeline" ? <PipelineDiagram /> : null;
+  const hasVisual = Boolean(shot || visual);
+
+  return (
+    <article className={"project" + (hasVisual ? "" : " project--text")}>
+      <div className="project__copy">
+        <h2 className="project__name">{name}</h2>
+        {tech && <span className="project__tech">{tech}</span>}
+        <p className="project__desc">{lead}</p>
+        {detail && <p className="project__desc project__desc--detail">{detail}</p>}
+        <div className="project__links">
+          {site && (
+            <a className="project__site" href={site}>
+              Visit the site<span>→</span>
+            </a>
+          )}
+          {repo && (
+            <a className="project__repo" href={repo}>
+              <GithubSVG className="project__repo-icon" />
+              View the code on GitHub
+            </a>
+          )}
+        </div>
+      </div>
+
+      {hasVisual && (
+        <div className="project__visual">
+          {shot ? (
+            <img className="project__img" src={shot} alt={name + " screenshot"} loading="lazy" />
+          ) : (
+            visual
+          )}
+        </div>
+      )}
+    </article>
+  );
+}

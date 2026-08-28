@@ -1,0 +1,8 @@
+services:
+  personal-site:
+    image: ghcr.io/cade-gray/personal-site-react:latest
+    restart: unless-stopped
+    ports:
+      # host:container — 3006 to sit clear of platefind on 3005. Point the
+      # reverse proxy for cadegray.dev at this port.
+      - "3006:80"

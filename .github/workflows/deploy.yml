@@ -1,0 +1,65 @@
+name: Deploy personal site to VPS
+
+on:
+  pull_request:
+    types: [closed]
+    branches: ["master"]
+  # Manual re-deploy without opening a PR.
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+
+concurrency:
+  group: personal-site-deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    # Only on a merged PR, not one that was merely closed. workflow_dispatch has
+    # no pull_request payload, so allow that through too.
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.pull_request.merged == true }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GH_TOKEN }}
+
+      # No `cache-to: type=gha`. On `pull_request: closed` the Actions cache
+      # scope is the PR's own ref, which no longer exists once merged, so
+      # reserving a cache blob fails and takes the deploy down with it.
+      - name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          tags: |
+            ghcr.io/cade-gray/personal-site-react:latest
+            ghcr.io/cade-gray/personal-site-react:${{ github.sha }}
+
+      - name: Deploy on VPS (docker compose pull + up)
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          port: ${{ secrets.VPS_PORT || 22 }}
+          script: |
+            set -e
+            cd /srv/personal-site
+            docker compose pull
+            docker compose up -d
+            docker image prune -f
