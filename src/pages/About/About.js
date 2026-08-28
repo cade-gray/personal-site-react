@@ -85,9 +85,11 @@ export default function About() {
           </h2>
         </Reveal>
         <Reveal className="about__pills" delay={80}>
-          {["Applying technology in a financial context",
-            "Financial software (Fiserv, MeridianLink, Jack Henry)",
-            ...BEYOND_CODE].map((skill) => (
+          {[
+            "Applying technology in a financial context",
+            "Financial software (Fiserv DNA and CCM, MeridianLink, Visa)",
+            ...BEYOND_CODE,
+          ].map((skill) => (
             <span key={skill} className="chip chip--pill">
               {skill}
             </span>
